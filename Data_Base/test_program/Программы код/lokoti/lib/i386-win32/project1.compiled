@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\2.6.2\bin\i386-win32\fpc.exe" Date="1131441888"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi &quot;-FiD:\Data_Base\test_program\Программы код\lokoti\lib\i386-win32&quot; &quot;-FuD:\Data_Base\test_program\Программы код\lokoti\&quot; &quot;-FUD:\Data_Base\test_program\Программы код\lokoti\lib\i386-win32\&quot; -l project1.lpr"/>
-</CONFIG>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\2.6.2\bin\i386-win32\fpc.exe" Date="1131441888"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi &quot;-FiC:\Users\yaice_000\Desktop\Функция возвращающая несколько значений\lib\i386-win32&quot; &quot;-FuC:\Users\yaice_000\Desktop\Функция возвращающая несколько значений\&quot; &quot;-FUC:\Users\yaice_000\Desktop\Функция возвращающая несколько значений\lib\i386-win32\&quot; -l project1.lpr"/>
-</CONFIG>

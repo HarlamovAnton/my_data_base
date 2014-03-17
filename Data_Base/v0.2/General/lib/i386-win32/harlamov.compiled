@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\2.6.2\bin\i386-win32\fpc.exe" Date="1131441888"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -FiD:\Data_Base\v0.2\General\lib\i386-win32 -FuD:\Data_Base\v0.2\Module -FuD:\Data_Base\v0.2\General\ -FUD:\Data_Base\v0.2\General\lib\i386-win32\ -l harlamov.lpr"/>
-</CONFIG>
