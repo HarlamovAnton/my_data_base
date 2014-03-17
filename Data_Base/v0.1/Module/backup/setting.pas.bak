@@ -1,0 +1,13 @@
+unit setting;
+
+
+
+interface
+
+uses
+  Classes, SysUtils;
+
+implementation
+
+end.
+

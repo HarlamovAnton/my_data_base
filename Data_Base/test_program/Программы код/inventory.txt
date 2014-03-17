@@ -1,0 +1,82 @@
+program inventory;
+uses crt;
+var i,x,y:integer;
+begin
+  gotoxy(61,2);
+  write(#218);
+  gotoxy(61,11);
+  write(#192);
+  gotoxy(70,2);
+  write(#191);
+  gotoxy(70,11);
+  write(#217);
+  {===================}
+  for i:= 62 to 69 do
+  begin
+    gotoxy(i,2);
+    write(#196);
+  end;
+  for i:= 62 to 69 do
+  begin
+    gotoxy(i,11);
+    write(#196);
+  end;
+  for i:= 3 to 10 do
+  begin
+    gotoxy(61,i);
+    write(#179);
+  end;
+  for i:= 3 to 10 do
+  begin
+    gotoxy(70,i);
+    write(#179);
+  end;
+  {============}
+  gotoxy(64,2);
+  write(#194);
+  gotoxy(67,2);
+  write(#194);
+  gotoxy(64,11);
+  write(#193);
+  gotoxy(67,11);
+  write(#193);
+  for i:= 3 to 10 do
+  begin
+    gotoxy(64,i);
+    write(#179);
+  end;
+  for i:= 3 to 10 do
+  begin
+    gotoxy(67,i);
+    write(#179);
+  end;
+  {================}
+  gotoxy(61,5);
+  write(#195);
+  gotoxy(61,8);
+  write(#195);
+  gotoxy(70,5);
+  write(#180);
+  gotoxy(70,8);
+  write(#180);
+  for i:= 62 to 69 do
+  begin
+    gotoxy(i,5);
+    write(#196);
+  end;
+   for i:= 62 to 69 do
+  begin
+    gotoxy(i,8);
+    write(#196);
+  end;
+  {===============}
+  gotoxy(64,5);
+  write(#197);
+  gotoxy(67,8);
+  write(#197);
+  gotoxy(64,8);
+  write(#197);
+  gotoxy(67,5);
+  write(#197);
+readln;
+end. 

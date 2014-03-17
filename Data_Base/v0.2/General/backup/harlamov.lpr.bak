@@ -1,0 +1,7 @@
+program harlamov;
+uses general_menu, vibor;
+begin
+  v_menu;
+  readln;
+end.
+

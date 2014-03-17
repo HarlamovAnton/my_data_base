@@ -1,0 +1,14 @@
+unit menu;
+interface
+
+procedure v_menu;
+
+implementation
+
+procedure v_menu;
+begin
+  writeln('/*Подключен модуль menu*/');
+end;
+
+end.
+

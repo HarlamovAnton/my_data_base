@@ -1,0 +1,8 @@
+program harlamov;
+uses general_menu,vvod_menu,vivod_menu, read_file,write_file,setting,
+ramka_for_menu, sub_menu, text_for_sub_menu, element_videleniya;
+begin
+  v_menu;
+  readln;
+end.
+
