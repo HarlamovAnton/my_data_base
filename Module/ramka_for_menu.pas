@@ -1,11 +1,17 @@
 unit ramka_for_menu;
+
 interface
+
 procedure ramka_menu(x1,y1,x2,y2,c:integer);
+
 procedure line(var j:integer;c:integer);
+
 procedure ramka_two_menu(j:integer;c:integer);
+
 implementation
+
 uses crt,text_for_sub_menu;
-const zero=0;
+
 {
 Процедура
 Вывод линии
@@ -13,6 +19,7 @@ j-номер строки
 c-номер цвета
 }
 procedure line(var j:integer;c:integer);
+var i:integer;
 begin
   textcolor(c);
   gotoxy(17,j+1);write(#220);write(#220);write(#220);
@@ -97,18 +104,18 @@ begin
   {Правая line}
   for i:=1 to vs do
   begin
-    gotoxy(19+dl,j+i+1);write(#186);
+    gotoxy(19+dl,j+i+1);write(#185);
   end;
   {Левая  line}
   for i:=1 to vs do
   begin
-    gotoxy(20,j+i+1);write(#186);
+    gotoxy(20,j+i+1);write(#204);
   end;
   gotoxy(20,j+vs+2);write(#200);
   {Низ line}
   for i:=1 to dl-2 do
   begin
-    gotoxy(20+i,j+vs+2);write(#209);
+    gotoxy(20+i,j+vs+2);write(#207);
   end;
   write(#188);
 end;
