@@ -1,8 +1,17 @@
 unit text_for_sub_menu;
+
 interface
+
 function text_fsm(kop:integer):integer;
+
 implementation
+
 uses crt;
+{
+Функция предназначена для
+1.Вывод дополнительного меню
+2.Выбор нужного элемента(для выполнения действий)
+}
 function text_fsm(kop:integer):integer;
 var t_fsm:array[1..3] of string;
     x,y:integer;

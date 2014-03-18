@@ -1,9 +1,15 @@
 unit general_menu;
+
 interface
+
 const end_m=6;{Кол-во строк в главном меню}
+
 procedure v_menu;
+
 implementation
+
 uses crt,ramka_for_menu,text_for_sub_menu,vibor;
+
 procedure about_for_me;
 begin
   textbackground(red);
@@ -22,9 +28,11 @@ var msfm:array[1..end_m] of string;
     x,y:integer;
     c:char;
     i,g_m:integer;
+    exit_g:boolean;
     exit_1:boolean;
 begin
   exit_1:=false;
+  exit_g:=true;
   msfm[1]:='Ввод данных';
   msfm[2]:='Вывод данных';
   msfm[3]:='Запись';
@@ -88,8 +96,8 @@ begin
       i:=text_fsm(g_m);
       if i<>0 then vibor_deistvii(g_m,i)
       else exit_1:=true;
-    until exit_1=true;
-  until (i=end_m)and(c=#13);
+    until (exit_1=true)or(g_m=6);
+  until (g_m=6)and(i=1);
 end;
 
 end.
