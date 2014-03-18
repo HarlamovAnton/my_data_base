@@ -12,8 +12,8 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="24" Y="6"/>
-        <UsageCount Value="91"/>
+        <CursorPos X="81" Y="6"/>
+        <UsageCount Value="128"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -22,9 +22,9 @@
         <UnitName Value="general_menu"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="138" Y="14"/>
-        <UsageCount Value="91"/>
+        <TopLine Value="92"/>
+        <CursorPos X="37" Y="113"/>
+        <UsageCount Value="128"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -34,9 +34,10 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="62"/>
-        <CursorPos X="152" Y="78"/>
-        <UsageCount Value="82"/>
+        <TopLine Value="47"/>
+        <CursorPos X="93" Y="250"/>
+        <FoldState Value=" T3H0B5 pj3k40R2o"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -45,9 +46,9 @@
         <UnitName Value="vivod_menu"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="8"/>
-        <CursorPos X="77" Y="19"/>
-        <UsageCount Value="82"/>
+        <TopLine Value="1"/>
+        <CursorPos X="141" Y="22"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -57,8 +58,8 @@
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="40" Y="3"/>
-        <UsageCount Value="82"/>
+        <CursorPos X="10" Y="30"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -68,8 +69,8 @@
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="34" Y="5"/>
-        <UsageCount Value="82"/>
+        <CursorPos X="10" Y="30"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -78,20 +79,20 @@
         <UnitName Value="setting"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="10" Y="5"/>
-        <UsageCount Value="82"/>
+        <TopLine Value="88"/>
+        <CursorPos X="68" Y="189"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="..\Module\ramka_for_menu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ramka_for_menu"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="89"/>
-        <CursorPos X="133" Y="107"/>
-        <UsageCount Value="78"/>
+        <TopLine Value="87"/>
+        <CursorPos X="20" Y="38"/>
+        <UsageCount Value="115"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -101,29 +102,27 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="50" Y="5"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="106"/>
       </Unit8>
       <Unit9>
         <Filename Value="..\Module\text_for_sub_menu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="text_for_sub_menu"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="71"/>
-        <CursorPos X="49" Y="98"/>
-        <UsageCount Value="69"/>
+        <TopLine Value="93"/>
+        <CursorPos X="39" Y="116"/>
+        <UsageCount Value="106"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="..\Module\element_videleniya.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="element_videleniya"/>
-        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="15" Y="3"/>
-        <UsageCount Value="56"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="93"/>
       </Unit10>
       <Unit11>
         <Filename Value="..\Module\vibor.pas"/>
@@ -131,9 +130,9 @@
         <UnitName Value="vibor"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="16"/>
-        <CursorPos X="39" Y="16"/>
-        <UsageCount Value="35"/>
+        <TopLine Value="18"/>
+        <CursorPos X="28" Y="46"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -141,14 +140,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="43" Y="11"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
       </Unit12>
       <Unit13>
         <Filename Value="..\..\test_program\Программы код\Код в рамке.pas"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="29" Y="13"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
       </Unit13>
     </Units>
     <General>
@@ -156,124 +155,124 @@
     </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="83" Column="6" TopLine="66"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="10" Column="140" TopLine="1"/>
       </Position1>
       <Position2>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="37" Column="40" TopLine="22"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="17" Column="11" TopLine="1"/>
       </Position2>
       <Position3>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="72" Column="21" TopLine="61"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="4" Column="38" TopLine="1"/>
       </Position3>
       <Position4>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="79" Column="31" TopLine="70"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="17" Column="11" TopLine="1"/>
       </Position4>
       <Position5>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="47" Column="46" TopLine="22"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="23" Column="1" TopLine="1"/>
       </Position5>
       <Position6>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="5" Column="82" TopLine="1"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="17" Column="11" TopLine="1"/>
       </Position6>
       <Position7>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="9" Column="1" TopLine="1"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="23" Column="1" TopLine="1"/>
       </Position7>
       <Position8>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="5" Column="70" TopLine="1"/>
+        <Filename Value="..\Module\write_file.pas"/>
+        <Caret Line="16" Column="1" TopLine="1"/>
       </Position8>
       <Position9>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="4" Column="18" TopLine="1"/>
+        <Filename Value="..\Module\read_file.pas"/>
+        <Caret Line="28" Column="52" TopLine="1"/>
       </Position9>
       <Position10>
-        <Filename Value="..\Module\vibor.pas"/>
+        <Filename Value="..\Module\general_menu.pas"/>
         <Caret Line="6" Column="1" TopLine="1"/>
       </Position10>
       <Position11>
-        <Filename Value="..\Module\vibor.pas"/>
-        <Caret Line="47" Column="26" TopLine="29"/>
+        <Filename Value="..\Module\general_menu.pas"/>
+        <Caret Line="7" Column="60" TopLine="1"/>
       </Position11>
       <Position12>
         <Filename Value="..\Module\vibor.pas"/>
-        <Caret Line="13" Column="8" TopLine="1"/>
+        <Caret Line="30" Column="92" TopLine="21"/>
       </Position12>
       <Position13>
-        <Filename Value="..\Module\vivod_menu.pas"/>
-        <Caret Line="16" Column="21" TopLine="1"/>
+        <Filename Value="..\Module\general_menu.pas"/>
+        <Caret Line="6" Column="1" TopLine="1"/>
       </Position13>
       <Position14>
-        <Filename Value="..\Module\vivod_menu.pas"/>
-        <Caret Line="4" Column="79" TopLine="1"/>
+        <Filename Value="..\Module\vibor.pas"/>
+        <Caret Line="55" Column="41" TopLine="29"/>
       </Position14>
       <Position15>
-        <Filename Value="..\Module\vivod_menu.pas"/>
-        <Caret Line="19" Column="10" TopLine="1"/>
+        <Filename Value="..\Module\general_menu.pas"/>
+        <Caret Line="99" Column="10" TopLine="69"/>
       </Position15>
       <Position16>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="52" Column="59" TopLine="50"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="50" Column="1" TopLine="23"/>
       </Position16>
       <Position17>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="8" Column="15" TopLine="1"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="71" Column="15" TopLine="50"/>
       </Position17>
       <Position18>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="115" Column="10" TopLine="13"/>
+        <Filename Value="..\Module\ramka_for_menu.pas"/>
+        <Caret Line="57" Column="22" TopLine="34"/>
       </Position18>
       <Position19>
-        <Filename Value="..\Module\vibor.pas"/>
-        <Caret Line="24" Column="5" TopLine="15"/>
+        <Filename Value="..\Module\text_for_sub_menu.pas"/>
+        <Caret Line="10" Column="2" TopLine="1"/>
       </Position19>
       <Position20>
-        <Filename Value="..\Module\general_menu.pas"/>
-        <Caret Line="60" Column="130" TopLine="47"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="138" Column="16" TopLine="119"/>
       </Position20>
       <Position21>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="8" Column="9" TopLine="8"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="107" Column="10" TopLine="98"/>
       </Position21>
       <Position22>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="53" Column="28" TopLine="28"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="124" Column="7" TopLine="108"/>
       </Position22>
       <Position23>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="61" Column="20" TopLine="42"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="17" Column="43" TopLine="14"/>
       </Position23>
       <Position24>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="46" Column="23" TopLine="31"/>
+        <Filename Value="..\Module\text_for_sub_menu.pas"/>
+        <Caret Line="37" Column="33" TopLine="11"/>
       </Position24>
       <Position25>
-        <Filename Value="..\Module\ramka_for_menu.pas"/>
-        <Caret Line="16" Column="4" TopLine="8"/>
+        <Filename Value="..\Module\text_for_sub_menu.pas"/>
+        <Caret Line="123" Column="27" TopLine="92"/>
       </Position25>
       <Position26>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="113" Column="57" TopLine="96"/>
+        <Filename Value="..\Module\text_for_sub_menu.pas"/>
+        <Caret Line="111" Column="37" TopLine="89"/>
       </Position26>
       <Position27>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="66" Column="1" TopLine="51"/>
+        <Filename Value="..\Module\text_for_sub_menu.pas"/>
+        <Caret Line="9" Column="22" TopLine="1"/>
       </Position27>
       <Position28>
-        <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="59" Column="1" TopLine="48"/>
+        <Filename Value="..\Module\setting.pas"/>
+        <Caret Line="69" Column="29" TopLine="58"/>
       </Position28>
       <Position29>
-        <Filename Value="..\Module\general_menu.pas"/>
-        <Caret Line="78" Column="57" TopLine="59"/>
+        <Filename Value="..\Module\vvod_menu.pas"/>
+        <Caret Line="278" Column="48" TopLine="244"/>
       </Position29>
       <Position30>
         <Filename Value="..\Module\vvod_menu.pas"/>
-        <Caret Line="113" Column="73" TopLine="99"/>
+        <Caret Line="10" Column="23" TopLine="1"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
