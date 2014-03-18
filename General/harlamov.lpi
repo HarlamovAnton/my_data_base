@@ -33,7 +33,7 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <Units Count="11">
+    <Units Count="12">
       <Unit0>
         <Filename Value="harlamov.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -89,6 +89,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="element_videleniya"/>
       </Unit10>
+      <Unit11>
+        <Filename Value="..\Module\vibor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="vibor"/>
+      </Unit11>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -31,16 +31,16 @@ var i:integer;
 begin
   textcolor(c);
   gotoxy(x1,y1);
-  for i:=1 to y2-1 do write(#220);{}
-  for i:=2 to x2  do {}
+  for i:=1 to y2-1 do write(#220);{Верхняя линия}
+  for i:=2 to x2  do {Левая}
   begin
     gotoxy(x1+1,i);write(#221);
   end;
-  for i:=2 to (y2 div 2)+1 do {}
+  for i:=1 to (y2 div 2) do {Правая линия}
   begin
     gotoxy(y2,i);write(#221);
   end;
-  for i:=2 to y2-1 do {}
+  for i:=2 to y2-1 do {Левая линия}
   begin
     gotoxy(i,x2);write(#220);
   end;
@@ -63,8 +63,7 @@ begin
   3:write('#Запись__________=');
   4:write('#Чтение__________=');
   5:write('#Настройки_________=');
-  6:write('#Автор_________=');
-  7:write('#Выход_=');
+  6:write('#Выход_=');
   end;
 end;
 {
@@ -78,19 +77,16 @@ begin
   zzz(j);textcolor(c);
   case j of
     1,2:begin{Ввод данных}{Вывод данных}
-        dl:=22;vs:=2;
+        dl:=24;vs:=4;
         end;
     3,4:begin{Запись}{Чтение}
-        dl:=18;vs:=3;
+        dl:=20;vs:=5;
         end;
     5:begin{Настройки}
-        dl:=20;vs:=3;
+        dl:=22;vs:=5;
       end;
-    6:begin{Разработчик}
-        dl:=16;vs:=1;
-      end;
-    7:begin{Выход}
-        dl:=8;vs:=2;
+    6:begin{Выход}
+        dl:=10;vs:=4;
       end;
   end;
   {Верх line}
@@ -112,7 +108,7 @@ begin
   {Низ line}
   for i:=1 to dl-2 do
   begin
-    gotoxy(20+i,j+vs+2);write(#205);
+    gotoxy(20+i,j+vs+2);write(#209);
   end;
   write(#188);
 end;
