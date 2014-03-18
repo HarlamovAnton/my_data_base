@@ -10,7 +10,7 @@ procedure ramka_two_menu(j:integer;c:integer);
 
 implementation
 
-uses crt,text_for_sub_menu;
+uses crt,general_menu;
 
 {
 Процедура
@@ -19,11 +19,10 @@ j-номер строки
 c-номер цвета
 }
 procedure line(var j:integer;c:integer);
-var i:integer;
 begin
   textcolor(c);
   gotoxy(17,j+1);write(#220);write(#220);write(#220);
-  textcolor(white);
+  textcolor(colortext);
 end;
 {
 Процедура
@@ -55,7 +54,7 @@ begin
   gotoxy(y2,x2);write(#188);{}
   gotoxy(x1+1,x2);write(#200);{}
   gotoxy(x1+1,x1+1);write(#201);{}
-  textcolor(white);
+  textcolor(colortext);
 end;
 {
 Процедура для вывод текста над дополнительным меню
@@ -63,14 +62,15 @@ j-номер главного элемента массива
 }
 procedure zzz(j:integer);
 begin
+  textcolor(colortext);
   gotoxy(20,j);
   case j of
-  1:write('#Ввод________________=');
-  2:write('#Вывод_______________=');
-  3:write('#Запись__________=');
-  4:write('#Чтение__________=');
-  5:write('#Настройки_________=');
-  6:write('#Выход_=');
+  1:write('##Ввод##');
+  2:write('##Вывод##');
+  3:write('##Запись##');
+  4:write('##Чтение##');
+  5:write('##Настройки##');
+  6:write('##Выход##');
   end;
 end;
 {
@@ -84,13 +84,13 @@ begin
   zzz(j);textcolor(c);
   case j of
     1,2:begin{Ввод данных}{Вывод данных}
-        dl:=24;vs:=4;
+        dl:=15;vs:=4;
         end;
     3,4:begin{Запись}{Чтение}
         dl:=20;vs:=5;
         end;
     5:begin{Настройки}
-        dl:=22;vs:=5;
+        dl:=16;vs:=5;
       end;
     6:begin{Выход}
         dl:=10;vs:=4;
