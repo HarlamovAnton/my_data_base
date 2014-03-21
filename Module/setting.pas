@@ -10,13 +10,17 @@ procedure choice_ramkacolor(var colortext, colorback, colorramka: integer);
 
 implementation
 
-uses crt, vvod_menu;
+uses crt;
 
-{
-Процедура "ramka" рисует рамку
-xd,yd-начальные координаты
-header-заголовок меню(string)
-}
+{****f* setting/ramka
+*  ARGUMENTS
+*    xd,yd-begin koordinate(integer)
+*    header-head text menu(string)
+*  PURPOSE
+*    ramka
+*  RESULT
+*    ramka
+******}
 procedure ramka(xd, yd: integer; header: string);
 var i: integer;
 begin
@@ -35,9 +39,14 @@ begin
   write(header);
 end;
 
-{
-Процедура вывода примера цветов
-}
+{****f* setting/zipol
+*  ARGUMENTS
+*    ne immeutsaya
+*  PURPOSE
+*    vivod primera color
+*  RESULT
+*    table color
+******}
 procedure zipol;
 var i:integer;
 begin
@@ -49,9 +58,15 @@ begin
   end;
   textbackground(black);
 end;
-{
-Процедура выбора цвета текста
-}
+
+{****f* setting/choice_textcolor
+*  ARGUMENTS
+*    standart color
+*  PURPOSE
+*    vibor color text
+*  RESULT
+*    izmenenie color text
+******}
 procedure choice_textcolor(var colortext, colorback, colorramka: integer);
 var
   s: string;
@@ -94,14 +109,22 @@ begin
         end;
       end;
     end;
-  until c = #13;
-  if (n<>colorback)and(n<>colorramka)then colortext:=n;
-  textcolor(colortext);
+  until (c = #13) or (c=#27);
+  if c<>#27 then
+  begin
+    if (n<>colorback)and(n<>colorramka)then colortext:=n;
+    textcolor(colortext);
+  end;
 end;
 
-{
-Процедура выбора цвета фона
-}
+{****f* setting/choice_backgroundcolor
+*  ARGUMENTS
+*    standart color
+*  PURPOSE
+*    vibor color background
+*  RESULT
+*    izmenenie color fona
+******}
 procedure choice_backgroundcolor(var colortext, colorback, colorramka: integer);
 var
   s: string;
@@ -144,14 +167,22 @@ begin
         end;
       end;
     end;
-  until c = #13;
-  if (n<>colortext)and(n<>colorramka)then colorback:=n;
-  textcolor(colortext);
+  until (c = #13) or (c=#27);
+  if c<>#27 then
+  begin
+    if (n<>colortext)and(n<>colorramka)then colorback:=n;
+    textcolor(colortext);
+  end;
 end;
 
-{
-Процедура выбора цвета рамки
-}
+{****f* setting/hoice_ramkacolor
+*  ARGUMENTS
+*    standart color
+*  PURPOSE
+*    vibor color ramka
+*  RESULT
+*    izmenenie color ramki
+******}
 procedure choice_ramkacolor(var colortext, colorback, colorramka: integer);
 var
   s: string;
@@ -194,9 +225,12 @@ begin
         end;
       end;
     end;
-  until c = #13;
-  if (n<>colorback)and(n<>colortext)then colorramka:=n;
-  textcolor(colortext);
+  until (c = #13)or(c=#27);
+  if c<>#27 then
+  begin
+    if (n<>colorback)and(n<>colortext)then colorramka:=n;
+    textcolor(colortext);
+  end;
 end;
 
 end.

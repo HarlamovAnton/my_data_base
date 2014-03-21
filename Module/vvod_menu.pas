@@ -4,17 +4,21 @@ interface
 
 uses crt, vibor;
 
-function imperation_vvod(var data_base_imperation: array of data_base;var n:integer): integer;
+function imperation_vvod(var data_base_imperation: array of data_base): integer;
 
 implementation
 uses general_menu;
-{
-Функция проверки строковой переменной.
-Являются ли все символы цифрами.
-И не привысило ли число диапозона от 1..10
-s-то что проверяем(должны быть цифры)
-и не должно выходить за пределы g
-}
+
+{****f* vvod_menu/p_diap
+*  ARGUMENTS
+*    s-proveryaetca na cifri(string)
+*    g-predeli(integer)
+*  PURPOSE
+*    Function proverky strokovoi peremennoi
+*    Yavlyautcya li strokovaya peremennaya ciframi
+*  RESULT
+*    True esli vse cifri inache False
+******}
 function p_diap(s: string; g: integer): boolean;
 var
   i, j: integer;
@@ -28,10 +32,14 @@ begin
   if (j <= 0) or (j > g) then p_diap := False;
 end;
 
-{
-Функция проверки текстовой переменной S на то ,что первый элемент это буква
-или цифра и строка не пустая
-}
+{****f* vvod_menu/p_name
+*  ARGUMENTS
+*    S-strokovya peremennaya (string)
+*  PURPOSE
+*    Proverka na to chto first element bukva ili cifri ili stroka ne pusta
+*  RESULT
+*    True ili false
+******}
 function p_name(s: string): boolean;
 begin
   if s <> '' then
@@ -39,11 +47,15 @@ begin
     else p_name := True;
 end;
 
-{
-Функция для ввода текста пользователем в рамку
-1.PBX and PBY - это начальные координаты
-2.PEX and PEY - это конечные координаты
-}
+{****f* vvod_menu/readdate
+*  ARGUMENTS
+*    1.PBX and PBY - begin koordinati
+*    2.PEX and PEY - end koordinati
+*  PURPOSE
+*    Function for vvod text v ramky
+*  RESULT
+*    Cho vvel polzovateli s klavi
+******}
 function readdate(pbx, pby, pex: integer): string;
 var
   c: char;//нажатая клавиша
@@ -68,9 +80,14 @@ begin
   readdate := s;
 end;
 
-{
-Процедура для вывода шапки
-}
+{****f* vvod_menu/header
+*  ARGUMENTS
+*    Ne imeutcya
+*  PURPOSE
+*    Procedure for vivod head table
+*  RESULT
+*    Head Table
+******}
 procedure header;
 var i: integer;
 begin
@@ -105,9 +122,14 @@ begin
 
 end;
 
-{
-Текст в шапке таблицы
-}
+{****f* vvod_menu/text_in_header
+*  ARGUMENTS
+*    MAS_VVOD soderzit text,kotorii vivoditsya v head table
+*  PURPOSE
+*    Text v Head Table
+*  RESULT
+*    Text Head Table
+******}
 procedure text_in_header(mas_vvod: array of string);
 var i: integer;
 begin
@@ -115,9 +137,14 @@ begin
   for i := 1 to 6 do Write(mas_vvod[i]);
 end;
 
-{
-Вывод таблицы
-}
+{****f* vvod_menu/table_one
+*  ARGUMENTS
+*    Ne imeutsya
+*  PURPOSE
+*    Vivod Table
+*  RESULT
+*    Table
+******}
 procedure table_one;
 var i, j: integer;
 begin
@@ -145,9 +172,14 @@ begin
 
 end;
 
-{
-Границы в таблице
-}
+{****f* vvod_menu/board
+*  ARGUMENTS
+*    Ne imeutsya
+*  PURPOSE
+*    Proverka na to chto first element bukva ili cifri ili stroka ne pusta
+*  RESULT
+*    True ili false
+******}
 procedure board;
 var i, j: integer;
 begin
@@ -177,10 +209,15 @@ begin
   until j >= 24;
 end;
 
-{
-Выбор ячейки
-}
-function select_cell:char;
+{****f* vvod_menu/select_cell
+*  ARGUMENTS
+*    Ne imeetsya
+*  PURPOSE
+*    Vibor yacheiki tablici
+*  RESULT
+*    Nazataiya knopka
+******}
+procedure select_cell;
 var x,y,i:integer;
     c:char;
 begin
@@ -235,7 +272,7 @@ begin
       end;
     end;
   until (c = #27)or(c=#13);
-  if c<>#13 then select_cell:=c
+  //if c<>#13 then select_cell:=c
   {else
   begin
     case x of
@@ -246,13 +283,15 @@ begin
   textbackground(black);
 end;
 
-{
-Функция
-консольного ввода
-1.Заполняет n мерный массива типа data_base данными
-2.Проверяет данные на корректность
-}
-function imperation_vvod(var data_base_imperation: array of data_base;var n:integer): integer;
+{****f* vvod_menu/imperation_vvod
+*  ARGUMENTS
+*    Data_Base_imperation massiv type data_base hranit vvedennie polizovatelem dannie
+*  PURPOSE
+*    Function otvechaet za pocledovatelinoe vipolnenie operacii
+*  RESULT
+*    Vivod tablici , vivod shapki i tak dalee
+******}
+function imperation_vvod(var data_base_imperation: array of data_base): integer;
 var
   i, j, g: integer;
   mas_vvod: array[1..10] of string;
@@ -272,12 +311,11 @@ begin
   table_one;
   board;
   repeat
-    c:=select_cell;
+    //c:=select_cell;
   until  c=#27;
   imperation_vvod := 10;
   textbackground(colorback);textcolor(colortext);
 
 end;
-
 
 end.

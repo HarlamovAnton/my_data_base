@@ -13,12 +13,17 @@ implementation
 uses crt,vvod_menu,vivod_menu,write_file,read_file,setting,general_menu;
 var n:integer;
     data_base_imperation:array[1..10] of data_base;
-{
-Процедура выбора действия
-j-номер главного меню
-i-номер действия дополнительного меню
-//обе переменные целочисленные
-}
+
+{****f* vibor/vibor_deistvii
+*  ARGUMENTS
+*    This is procedure :
+*    j(integer)-number main menu
+*    i(integer)-number sub menu
+*  PURPOSE
+*    This if procedure dlya vibora deistvii
+*  RESULT
+*    Zapusk sootvetstvyuchei podprogrammi
+******}
 procedure vibor_deistvii(j,i:integer);
 begin
   if j<>6 then
@@ -28,12 +33,12 @@ begin
     case j of
       1:begin
           case i of
-            1:n:=imperation_vvod(data_base_imperation,n);
+            1:n:=imperation_vvod(data_base_imperation);
           end;
         end;
       2:begin
           case i of
-            1:vivod_imperation(n,data_base_imperation);
+            1:vivod_imperation(data_base_imperation);
           end;
         end;
       3:begin

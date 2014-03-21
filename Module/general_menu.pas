@@ -1,7 +1,3 @@
-{****h*
-*  PURPOSE
-*    Модуль предназначен для вывода главного меню
-******}
 unit general_menu;
 
 interface
@@ -26,13 +22,13 @@ begin
   textbackground(black);
 end;
 
-{****f*
+{****f* general_menu/v_menu
 *  ARGUMENTS
-*    Данная процедура не имеет аргументы
+*    This is procedure ne imeet argumentov
 *  PURPOSE
-*    Процедура вывода главного меню
+*    This if procedure for main menu
 *  RESULT
-*    Главное меню
+*    Vivod menu
 ******}
 procedure v_menu;
 const end_m=6;{Кол-во строк в главном меню}
@@ -57,9 +53,11 @@ begin
   colorback:=8;
   colorramka:=12;
   repeat
+
     textbackground(colorback);textcolor(colortext);clrscr;
     gotoxy(1,1);
     ramka_menu(0,0,end_m+2,17,colorramka);
+
     //vivod text for general menu
     for i:=1 to end_m do
     begin
@@ -99,7 +97,9 @@ begin
         end;
       end;
     until c=#77;
+
     textbackground(colorback);
+
     repeat
       textbackground(colorback);
       textcolor(colortext);
@@ -121,6 +121,7 @@ begin
       if i<>0 then vibor_deistvii(g_m,i)
       else exit_1:=true;
     until (exit_1=true)or(g_m=6);
+
   until (g_m=6)and(i=1);
 end;
 

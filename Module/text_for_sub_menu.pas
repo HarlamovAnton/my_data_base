@@ -8,13 +8,14 @@ implementation
 
 uses crt,general_menu;
 
-
-
-{
-Функция предназначена для
-1.Вывод дополнительного меню
-2.Выбор нужного элемента(для выполнения действий)
-}
+{****f* text_for_sub_menu/text_fsm
+*  ARGUMENTS
+*    kop vibrannoe menu iz general menu
+*  PURPOSE
+*    text for sub menu
+*  RESULT
+*    vibrannoe menu iz sub menu
+******}
 function text_fsm(kop: integer): integer;
 var
   t_fsm: array[1..3] of string;
@@ -22,9 +23,15 @@ var
   c: char;
   l, p: integer;
   f: integer;
-  {
-Процедура предназначена для вывода текста из массива строк t_fsm
-}
+
+{****f* text_for_sub_menu/v_t_fsm
+*  ARGUMENTS
+*    t_fsm massiv text for sub menu
+*  PURPOSE
+*    Vibora deistvii iz sub menu
+*  RESULT
+*    Vibora deistvii iz sub menu
+******}
 procedure v_t_fsm(var t_fsm: array of string);
 var
   i: integer;

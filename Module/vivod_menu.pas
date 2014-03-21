@@ -4,16 +4,23 @@ interface
 
 uses vibor,crt;
 
-procedure vivod_imperation(var n:integer;data_base_imperation:array of data_base);
+procedure vivod_imperation(data_base_imperation:array of data_base);
 
 implementation
 
-procedure vivod_imperation(var n:integer;data_base_imperation:array of data_base);
+{****f* vivod_menu/vivod_imperation
+*  ARGUMENTS
+*    data_base_imperation massive type data_base
+*  PURPOSE
+*    Vivod tablici iz massiva
+*  RESULT
+*    Table s dannimi
+******}
+procedure vivod_imperation(data_base_imperation:array of data_base);
 var i:integer;
 begin
   clrscr;
   write('Ya tut');
-  write(n);
   //Консоль ввод
 
 end;

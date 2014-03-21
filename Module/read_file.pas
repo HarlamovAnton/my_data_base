@@ -6,6 +6,14 @@ procedure rtextfile;
 implementation
 uses crt;
 
+{****f* read_file/rbestypefile
+*  ARGUMENTS
+*    ne immeutsaya
+*  PURPOSE
+*    Chtenie v bestype file
+*  RESULT
+*    File s data
+******}
 procedure rbestypefile;
 begin
   clrscr;
@@ -14,6 +22,14 @@ begin
   clrscr;
 end;
 
+{****f* read_file/rxmlfile
+*  ARGUMENTS
+*    ne immeutsaya
+*  PURPOSE
+*    Chtenie v bestype file
+*  RESULT
+*    File s data
+******}
 procedure rxmlfile;
 begin
   clrscr;
@@ -22,6 +38,14 @@ begin
   clrscr;
 end;
 
+{****f* read_file/rtextfile
+*  ARGUMENTS
+*    ne immeutsaya
+*  PURPOSE
+*    Chtenie v bestype file
+*  RESULT
+*    File s data
+******}
 procedure rtextfile;
 begin
   clrscr;

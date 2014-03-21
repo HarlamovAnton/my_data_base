@@ -18,20 +18,34 @@ uses crt,general_menu;
 j-номер строки
 c-номер цвета
 }
+{****f* ramka_for_menu/line
+*  ARGUMENTS
+*    j-nomer stroki
+*    c-nomer color
+*  PURPOSE
+*    vivod linii na stroky N i cveta C
+*  RESULT
+*    line
+******}
 procedure line(var j:integer;c:integer);
 begin
   textcolor(c);
   gotoxy(17,j+1);write(#220);write(#220);write(#220);
   textcolor(colortext);
 end;
-{
-Процедура
-х1-начальная точка
-у1-конечная точка
-х2-длина верхней и нижней палки
-у2-высота левой и правой палки
-с-цвет
-}
+
+{****f* ramka_for_menu/ramka_menu
+*  ARGUMENTS
+*    x1-begin koordinate
+*    y1-begin koordinate
+*    x2-end koordinate
+*    y2-end koordinate
+*    c-cvet ramki
+*  PURPOSE
+*    Ramka
+*  RESULT
+*    Ramka cvetya C
+******}
 procedure ramka_menu(x1,y1,x2,y2,c:integer);
 var i:integer;
 begin
@@ -56,10 +70,15 @@ begin
   gotoxy(x1+1,x1+1);write(#201);{}
   textcolor(colortext);
 end;
-{
-Процедура для вывод текста над дополнительным меню
-j-номер главного элемента массива
-}
+
+{****f* ramka_for_menu/zzz
+*  ARGUMENTS
+*    j-nomer lementa massiva
+*  PURPOSE
+*    vivod text nad sub menu
+*  RESULT
+*    text nad menu
+******}
 procedure zzz(j:integer);
 begin
   textcolor(colortext);
@@ -73,10 +92,16 @@ begin
   6:write('##Выход##');
   end;
 end;
-{
-Процедура
-Вывод допольнительной рамки
-}
+
+{****f* ramka_for_menu/ramka_two_menu
+*  ARGUMENTS
+*    j-nomer vibranogo v general menu menyu
+*    c-color sub ramka
+*  PURPOSE
+*    Ramka
+*  RESULT
+*    Ramka dlya two menu
+******}
 procedure ramka_two_menu(j:integer;c:integer);
 var i:integer;
     dl,vs:integer;{dl - ширина. vs-высота}
