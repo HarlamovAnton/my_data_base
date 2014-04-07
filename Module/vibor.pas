@@ -1,19 +1,21 @@
 unit vibor;
 interface
-type data_base= record
-       name_app: string[20];
+type db
+     data_base= record
+       name_app: string;
        size_memory: integer;
        price: integer;
+       rating:integer;
        producer: string;
-       rating:1..100;
+       email:string;
      end;
 
 procedure vibor_deistvii(j,i:integer);
 implementation
 uses crt,vvod_menu,vivod_menu,write_file,read_file,setting,general_menu;
 var n:integer;
-    data_base_imperation:array[1..10] of data_base;
-
+    data_base_imperation:array[1..7] of data_base;
+    data_product_imperation:array[1..7] of data_product;
 {****f* vibor/vibor_deistvii
 *  ARGUMENTS
 *    This is procedure :
@@ -28,12 +30,10 @@ procedure vibor_deistvii(j,i:integer);
 begin
   if j<>6 then
   begin
-    {writeln(j);
-    writeln(i);}
     case j of
       1:begin
           case i of
-            1:n:=imperation_vvod(data_base_imperation);
+            1:imperation_vvod(data_base_imperation,data_product_imperation,n);
           end;
         end;
       2:begin
@@ -45,7 +45,7 @@ begin
           case i of
             1:wbestypefile;
             2:wxmlfile;
-            3:wtextfile;
+            3:wtextfile(data_base_imperation);
           end;
         end;
       4:begin

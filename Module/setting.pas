@@ -85,6 +85,7 @@ begin
   Write('->');
   repeat
     c := readkey;
+    //TODO оптимизация повторяющихся действий
     case Ord(c) of
       72:
       begin

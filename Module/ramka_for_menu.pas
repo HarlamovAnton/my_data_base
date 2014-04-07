@@ -12,12 +12,6 @@ implementation
 
 uses crt,general_menu;
 
-{
-Процедура
-Вывод линии
-j-номер строки
-c-номер цвета
-}
 {****f* ramka_for_menu/line
 *  ARGUMENTS
 *    j-nomer stroki
@@ -107,6 +101,7 @@ var i:integer;
     dl,vs:integer;{dl - ширина. vs-высота}
 begin
   zzz(j);textcolor(c);
+  //TODO через массивы
   case j of
     1,2:begin{Ввод данных}{Вывод данных}
         dl:=15;vs:=4;

@@ -1,8 +1,9 @@
 unit write_file;
 interface
+uses vibor;
 procedure wbestypefile;
 procedure wxmlfile;
-procedure wtextfile;
+procedure wtextfile(data_base_imperation:array of data_base);
 implementation
 uses crt;
 
@@ -46,11 +47,33 @@ end;
 *  RESULT
 *    File s data
 ******}
-procedure wtextfile;
+procedure wtextfile(data_base_imperation:array of data_base);
+var f:text;
+    s:string;
 begin
   clrscr;
+  {$I-}
+  assign(f,'abs.txt');
+  rewrite(f);
+  s:=data_base_imperation[1].name_app;
+  writeln(f,s);
+
+  str(data_base_imperation[1].size_memory,s);
+  writeln(f,s);
+
+  str(data_base_imperation[1].price,s);
+  writeln(f,s);
+
+  str(data_base_imperation[1].rating,s);
+  writeln(f,s);
+
+  s:=data_base_imperation[1].producer;
+  writeln(f,s);
+
+  close(f);
   write('Ya zapisivayu dannie v text file');
   readln;
+  {$I+}
   clrscr;
 end;
 
