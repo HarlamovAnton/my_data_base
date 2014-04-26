@@ -1,21 +1,44 @@
 unit vibor;
 interface
-type db
-     data_base= record
+
+//Типы массивов
+type
+    data_product=record
+      producer:string;
+      email:string;
+    end;
+    data_base= record
        name_app: string;
        size_memory: integer;
        price: integer;
        rating:integer;
-       producer: string;
-       email:string;
-     end;
+       producer:integer;
+       support:data_product;
+    end;
 
+//Процедуры
 procedure vibor_deistvii(j,i:integer);
+
 implementation
 uses crt,vvod_menu,vivod_menu,write_file,read_file,setting,general_menu;
 var n:integer;
     data_base_imperation:array[1..7] of data_base;
-    data_product_imperation:array[1..7] of data_product;
+
+function zapolnenie(var data_base_imperation:array of data_base):boolean;
+var i :integer;
+begin
+  for i:=1 to 7 do
+  begin
+    data_base_imperation[i].name_app:='';
+    data_base_imperation[i].price:=0;
+    data_base_imperation[i].producer:=0;
+    data_base_imperation[i].size_memory:=0;
+    data_base_imperation[i].rating:=0;
+    data_base_imperation[i].support.producer:='';
+    data_base_imperation[i].support.email:='';
+  end;
+end;
+
 {****f* vibor/vibor_deistvii
 *  ARGUMENTS
 *    This is procedure :
@@ -28,12 +51,13 @@ var n:integer;
 ******}
 procedure vibor_deistvii(j,i:integer);
 begin
+  //zapolnenie(data_base_imperation);
   if j<>6 then
   begin
     case j of
       1:begin
           case i of
-            1:imperation_vvod(data_base_imperation,data_product_imperation,n);
+            1:imperation_vvod(data_base_imperation,n);
           end;
         end;
       2:begin
@@ -43,8 +67,8 @@ begin
         end;
       3:begin
           case i of
-            1:wbestypefile;
-            2:wxmlfile;
+            1:wbestypefile(data_base_imperation);
+            2:wxmlfile(data_base_imperation);
             3:wtextfile(data_base_imperation);
           end;
         end;

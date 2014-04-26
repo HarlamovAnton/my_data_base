@@ -4,13 +4,13 @@ interface
 
 uses crt, vibor;
 
-procedure imperation_vvod(var data_base_imperation: array of data_base;var data_product_imperation:array of data_product;var n:integer);
+procedure imperation_vvod(var data_base_imperation: array of data_base;var n:integer);
 
 implementation
 
 uses general_menu;
 
-procedure data_product(var data_base_imperation: array of data_base;var data_product_imperation:array of data_product;var n:integer);
+procedure data_product(var data_base_imperation: array of data_base;var n:integer);
 var c:char;
   {
   procedure create;
@@ -34,10 +34,17 @@ var c:char;
 begin
   clrscr;
   {create;}
+
+  writeln('Введите имя разработчика');
+  readln(data_base_imperation[1].support.producer);
+
+  writeln('Введите емайл разработчика');
+  readln(data_base_imperation[1].support.email);
+
   repeat
     c:=readkey{vibor};
   until (c=#9) or (c=#27);
-  if c = #9 then imperation_vvod(data_base_imperation,data_product_imperation,n);
+  if c = #9 then imperation_vvod(data_base_imperation,n);
 end;
 
 {****f* vvod_menu/select_cell
@@ -48,7 +55,7 @@ end;
 *  RESULT
 *    Nazataiya knopka
 ******}
-function select_cell(var data_base_imperation: array of data_base;var data_product_imperation:array of data_product):char;
+function select_cell(var data_base_imperation: array of data_base):char;
 const
   x:integer=2;
   y:integer=5;
@@ -123,7 +130,7 @@ begin
             ground:=14;
           end;
         5:begin
-            s:=data_base_imperation[i].producer;
+            str(data_base_imperation[i].producer,s);
             ground:=17;
           end;
         end;
@@ -135,14 +142,13 @@ begin
         end
         else gotoxy(x+length(s),y);
 
-
         case c of
           '0'..'9':begin
                      s:=s+c;
                      write(c);
                    end;
       'A'..'z',' ':begin
-                     if not( j in [2..4] ) then
+                     if not( j in [2..5] ) then
                      begin
                        s:=s+c;
                        write(c);
@@ -150,7 +156,7 @@ begin
                    end;
         end;
 
-        if j in [2..4] then val(s,k);
+        if j in [2..5] then val(s,k);
         with data_base_imperation[i] do
         begin
           case j of
@@ -158,7 +164,7 @@ begin
             2:size_memory:=k;
             3:price:=k;
             4:rating:=k;
-            5:producer:=s;
+            5:producer:=k;
           end;
         end;
 
@@ -176,10 +182,11 @@ end;
 *  RESULT
 *    Vivod tablici , vivod shapki i tak dalee
 ******}
-procedure imperation_vvod(var data_base_imperation: array of data_base;var data_product_imperation:array of data_product;var n:integer);
+procedure imperation_vvod(var data_base_imperation: array of data_base;var n:integer);
 var
   mas_vvod: array[1..10] of string;
   c:char;
+
   {****f* vvod_menu/header
   *  ARGUMENTS
   *    Ne imeutcya
@@ -348,7 +355,7 @@ var
         str(data_base_imperation[i].rating,s);
         gotoxy(46,for_kursor(i));write_data(14,s);
       end;
-      s:=data_base_imperation[i].producer;
+      str(data_base_imperation[i].producer,s);
       gotoxy(62,for_kursor(i));write_data(17,s);
     end;
   end;
@@ -367,10 +374,10 @@ begin
   board;//Разделители столбцов в таблице
   if n=7 then  writeTEXT(data_base_imperation);
   repeat
-    c:=select_cell(data_base_imperation,data_product_imperation);
+    c:=select_cell(data_base_imperation);
   until  (c=#27)or(c=#9);
   n:=7;
-  if c=#9 then data_product(data_base_imperation,data_product_imperation,n);
+  if c=#9 then data_product(data_base_imperation,n);
   textbackground(colorback);textcolor(colortext);
 end;
 end.

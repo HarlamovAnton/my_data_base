@@ -47,8 +47,15 @@ end;
 *    File s data
 ******}
 procedure rtextfile;
+var f:text;
+    s:string;
 begin
   clrscr;
+  {$I-}
+  assign(f,'abs.txt');
+  reset(f);
+  //read();
+  {$I+}
   write('Ya zagruzil dannie v text file');
   readln;
   clrscr;

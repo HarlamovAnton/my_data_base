@@ -175,25 +175,33 @@ var i:integer;
   begin
     for i:=1 to 7 do
     begin
+
       s:=data_base_imperation[i].name_app;
+
       gotoxy(2,for_kursor(i));write_data(13,s);
+
       if data_base_imperation[i].size_memory<>0 then
       begin
         str(data_base_imperation[i].size_memory,s);
         gotoxy(16,for_kursor(i));write_data(15,s);
       end;
+
       if data_base_imperation[i].price<>0 then
       begin
         str(data_base_imperation[i].price,s);
         gotoxy(31,for_kursor(i));write_data(15,s);
       end;
+
       if data_base_imperation[i].rating<>0 then
       begin
         str(data_base_imperation[i].rating,s);
         gotoxy(46,for_kursor(i));write_data(14,s);
       end;
-      s:=data_base_imperation[i].producer;
+
+      str(data_base_imperation[i].producer,s);
+
       gotoxy(62,for_kursor(i));write_data(17,s);
+
     end;
   end;
 
